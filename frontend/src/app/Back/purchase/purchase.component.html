@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<div id="layoutSidenav">
+
+    <div id="layoutSidenav_nav">
+ 
+        <app-sidebarb></app-sidebarb>
+
+  
+
+
+
+</div>
+<div id="layoutSidenav_content">
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Purchase Order</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Purchase Order</li>
+        </ol>
+        
+         
+        <br><br>
+
+         <div class="card mb-4">
+            <div class="card-header">
+               
+            </div>
+            <div class="card-body">
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+               
+           <div class="datatable-search">
+            <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+            </div>
+          </div>
+          <div class="datatable-container">
+            <table id="datatablesSimple" class="datatable-table">
+              <thead>
+                <tr>
+                  <th data-sortable="true" style="width: 10%;">
+                    <a href="#" class="datatable-sorter">Description</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Product Name</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Quantity</a>
+                  </th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Les données de la table vont ici -->
+                <tr ng-repeat="item in myData">
+                    <td>description </td>
+                    <td>name</td>
+                    <td>quantity </td>
+                    
+                   
+                    <td>
+                      <button  class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+         
+       </div>
+       </div>
+       </div>
+    
+
+</main>
+
+
+</div>
+</div>

@@ -1,0 +1,106 @@
+<app-header></app-header>
+
+<div id="layoutSidenav">
+
+    <div id="layoutSidenav_nav">
+ 
+        <app-sidebarb></app-sidebarb>
+
+  
+
+
+
+</div>
+<div id="layoutSidenav_content">
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">List Of Publications</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Publication</li>
+        </ol>
+
+
+        <form >
+            
+            <div class="form-group">
+                <label for="description">Commentary :</label>
+                <input type="text" class="form-control"  name="com" id="com" required>
+              </div>
+            
+              <br>
+            <button type="submit" class="btn btn-primary">Add Comment</button>
+        </form>
+        
+         
+        <br><br>
+
+         <div class="card mb-4">
+            <div class="card-header">
+                Publications 
+            </div>
+            <div class="card-body">
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+                <div class="datatable-dropdown">
+              <label>
+               <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page
+              </label>
+               </div>
+           <div class="datatable-search">
+            <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+            </div>
+          </div>
+          <div class="datatable-container">
+            <table id="datatablesSimple" class="datatable-table">
+              <thead>
+                <tr>
+                  <th data-sortable="true" style="width: 10%;">
+                    <a href="#" class="datatable-sorter">Customer</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Date</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Image</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Publication</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Commentary</a>
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Les données de la table vont ici -->
+                <tr ng-repeat="item in myData">
+                  <td>customer_id  </td>
+                  <td>date_pub </td>
+                  <td>image_pub </td>
+                  <td>pub </td>
+                  <td>com</td>
+                    
+                    
+                    <td>
+                      <button  class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+         
+       </div>
+         </div>
+        </div>
+</main>
+
+
+</div>
+</div>
+
+
+

@@ -1,0 +1,78 @@
+
+
+
+  
+
+   <app-navbar></app-navbar>
+
+
+    <!-- Breadcrumb Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" href="#">Home</a>
+                    <span class="breadcrumb-item active">Purchase Order</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">PURCHASE ORDER</span></h2>
+        <div class="row px-xl-5">
+            <div class="col-lg-7 mb-5">
+                <div class="contact-form bg-light p-30">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
+                        <div class="control-group">
+                            <textarea class="form-control" rows="8" id="pub" placeholder="Description"
+                                required="required"
+                                data-validation-required-message="Please enter your description"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="name" placeholder="Product Name"
+                                required="required" data-validation-required-message="Please enter your product name" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+
+                        <div class="control-group">
+                            <input type="number" class="form-control" id="quantity" placeholder="The Amount"
+                                required="required" data-validation-required-message="Please enter your amount" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                       
+                        <div>
+                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Send
+                                </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+                <div class="bg-light p-30 mb-3">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Contact End -->
+
+
+   <app-footer></app-footer>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    

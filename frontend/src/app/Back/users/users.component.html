@@ -1,0 +1,348 @@
+<app-header></app-header>
+
+<div id="layoutSidenav">
+
+    <div id="layoutSidenav_nav">
+ 
+        <app-sidebarb></app-sidebarb>
+
+  
+
+
+
+</div>
+<div id="layoutSidenav_content">
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">USERS</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">USERS</li>
+        </ol>
+
+        
+        <form>
+
+  <div class="form-group">
+    <label>Type d'utilisateur:</label><br>
+    <label><input type="radio" name="user-type" value="Customer" checked>Customer</label><br>
+    <label><input type="radio" name="user-type" value="Supplier">Supplier</label><br>
+    <label><input type="radio" name="user-type" value="Deliverer">Deliverer</label>
+  </div>
+</form>
+
+        
+<div id="Customer-form" style="display: none;">
+  <form>
+    <div class="form-group">
+      <label for="Customername"> Name :</label>
+      <input type="text" class="form-control"  name="Customername" id="Customername" required>
+    </div>
+    <div class="form-group">
+      <label for="CustomerBirthday">Birthday :</label>
+      <input type="date" class="form-control"  name="CustomerBirthday" id="CustomerBirthday" required>
+    </div>
+    <div class="form-group">
+      <label for="LoginCustomer">Login :</label>
+      <input type="text" class="form-control" name="LoginCustomer" id="LoginCustomer" required>
+    </div>
+    <div class="form-group">
+      <label for="PasswordCustomer">Password :</label>
+      <input type="text" class="form-control" name="PasswordCustomer" id="PasswordCustomer" required>
+    </div>
+    <div class="form-group">
+      <label for="EmailCustomer">Email :</label>
+      <input type="text" class="form-control" name="EmailCustomer" id="EmailCustomer" required>
+    </div>
+    <div class="form-group">
+      <label for="PointsCustomer">Points :</label>
+      <input type="text" class="form-control" name="PointsCustomer" id="PointsCustomer" required>
+    </div>
+    <div class="form-group">
+      <label for="CINCustomer">CIN :</label>
+      <input type="text" class="form-control" name="CINCustomer" id="CINCustomer" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Add Customer</button>
+  </form>
+
+
+
+  <div class="card mb-4">
+    <div class="card-header">
+        CustomerData 
+    </div>
+    <div class="card-body">
+        <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+        <div class="datatable-dropdown">
+      <label>
+       <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> 
+      </label>
+       </div>
+   <div class="datatable-search">
+    <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+    </div>
+  </div>
+  <div class="datatable-container">
+    <table id="datatablesSimple" class="datatable-table">
+      <thead>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Name</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Birthday</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Login</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Password</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Email</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Points</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">CIN</a>
+          </th>
+      </thead>
+      <tbody>
+        <!-- Les données de la table vont ici -->
+        <tr >
+            <td>name </td>
+            <td>address </td>
+            <td>description </td>
+            <td>
+              <button  class="btn btn-primary btn-sm">Update</button>
+            </td>
+            <td>
+              <button  class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+ 
+</div>
+
+</div>
+</div>
+
+
+
+<div id="Supplier-form" style="display: none;">
+  <form>
+    <div class="form-group">
+      <label for="Suppliername"> Name :</label>
+      <input type="text" class="form-control"  name="Suppliername" id="Suppliername" required>
+    </div>
+    <div class="form-group">
+      <label for="SupplierBirthday">Birthday :</label>
+      <input type="date" class="form-control"  name="SupplierBirthday" id="SupplierBirthday" required>
+    </div>
+    <div class="form-group">
+      <label for="LoginSupplier">Login :</label>
+      <input type="text" class="form-control" name="LoginSupplier" id="LoginSupplier" required>
+    </div>
+    <div class="form-group">
+      <label for="PasswordSupplier">Password :</label>
+      <input type="text" class="form-control" name="PasswordSupplier" id="PasswordSupplier" required>
+    </div>
+    <div class="form-group">
+      <label for="EmailSupplier">Email :</label>
+      <input type="text" class="form-control" name="EmailSupplier" id="EmailSupplier" required>
+    </div>
+    <div class="form-group">
+      <label for="TypeSupplier">Type :</label>
+      <input type="text" class="form-control" name="TypeSupplier" id="TypeSupplier" required>
+    </div>
+    
+    <br>
+    <button type="submit" class="btn btn-primary">Add Supplier</button>
+  </form>
+
+
+
+  <div class="card mb-4">
+    <div class="card-header">
+        SupplierData 
+    </div>
+    <div class="card-body">
+        <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+        <div class="datatable-dropdown">
+      <label>
+       <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> 
+      </label>
+       </div>
+   <div class="datatable-search">
+    <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+    </div>
+  </div>
+  <div class="datatable-container">
+    <table id="datatablesSimple" class="datatable-table">
+      <thead>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Name</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Birthday</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Login</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Password</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Email</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Type</a>
+          </th>
+        
+      </thead>
+      <tbody>
+        <!-- Les données de la table vont ici -->
+        <tr >
+            <td>name </td>
+            <td>address </td>
+            <td>description </td>
+            <td>
+              <button  class="btn btn-primary btn-sm">Update</button>
+            </td>
+            <td>
+              <button  class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+ 
+</div>
+
+</div>
+</div>
+
+
+
+<div id="Deliverer-form" style="display: none;">
+  <form>
+    <div class="form-group">
+      <label for="Deliverername"> Name :</label>
+      <input type="text" class="form-control"  name="Deliverername" id="Deliverername" required>
+    </div>
+    <div class="form-group">
+      <label for="DelivererBirthday">Birthday :</label>
+      <input type="date" class="form-control"  name="DelivererBirthday" id="DelivererBirthday" required>
+    </div>
+    <div class="form-group">
+      <label for="LoginDeliverer">Login :</label>
+      <input type="text" class="form-control" name="LoginDeliverer" id="LoginDeliverer" required>
+    </div>
+    <div class="form-group">
+      <label for="PasswordDeliverer">Password :</label>
+      <input type="text" class="form-control" name="PasswordDeliverer" id="PasswordDeliverer" required>
+    </div>
+    <div class="form-group">
+      <label for="EmailDeliverer">Email :</label>
+      <input type="text" class="form-control" name="EmailDeliverer" id="EmailDeliverer" required>
+    </div>
+    <div class="form-group">
+      <label for="DisponibilityDeliverer">Disponibility :</label>
+      <input type="text" class="form-control" name="DisponibilityDeliverer" id="DisponibilityDeliverer" required>
+    </div>
+    
+    <br>
+    <button type="submit" class="btn btn-primary">Add Deliverer</button>
+  </form>
+
+
+
+
+  <div class="card mb-4">
+    <div class="card-header">
+        DelivererData 
+    </div>
+    <div class="card-body">
+        <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+        <div class="datatable-dropdown">
+      <label>
+       <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> 
+      </label>
+       </div>
+   <div class="datatable-search">
+    <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+    </div>
+  </div>
+  <div class="datatable-container">
+    <table id="datatablesSimple" class="datatable-table">
+      <thead>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Name</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Birthday</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Login</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Password</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Email</a>
+          </th>
+          <th data-sortable="true" style="width: 35%;">
+            <a href="#" class="datatable-sorter">Disponibility</a>
+          </th>
+          
+      </thead>
+      <tbody>
+        <!-- Les données de la table vont ici -->
+        <tr >
+            <td>name </td>
+            <td>address </td>
+            <td>description </td>
+            <td>
+              <button  class="btn btn-primary btn-sm">Update</button>
+            </td>
+            <td>
+              <button  class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+ 
+</div>
+
+</div>
+</div>
+
+
+
+         
+        <br><br>
+
+        
+       </div>
+       
+
+       
+</main>
+</div>
+
+
+</div>
+
+
+

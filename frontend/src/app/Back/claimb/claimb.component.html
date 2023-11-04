@@ -1,0 +1,114 @@
+<app-header></app-header>
+
+<div id="layoutSidenav">
+
+    <div id="layoutSidenav_nav">
+ 
+        <app-sidebarb></app-sidebarb>
+
+  
+
+
+
+</div>
+<div id="layoutSidenav_content">
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">List of Claims</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active">Claims</li>
+        </ol>
+        
+         
+        <br><br>
+
+         <div class="card mb-4">
+            <div class="card-header">
+                Claims
+            </div>
+            <div class="card-body">
+                <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns"><div class="datatable-top">
+                <div class="datatable-dropdown">
+              <label>
+               <select class="datatable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page
+              </label>
+               </div>
+           <div class="datatable-search">
+            <input class="datatable-input" placeholder="Search..." type="search" title="Search within table" aria-controls="datatablesSimple">
+            </div>
+          </div>
+          <div class="datatable-container">
+            <table id="datatablesSimple" class="datatable-table">
+              <thead>
+                <tr>
+                  <th data-sortable="true" style="width: 10%;">
+                    <a href="#" class="datatable-sorter">Claim Type</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Date</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Description</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Product Type</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Etat</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Customer</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Delivery</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Command Lign</a>
+                  </th>
+                  <th data-sortable="true" style="width: 35%;">
+                    <a href="#" class="datatable-sorter">Publication</a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Les données de la table vont ici -->
+                <tr *ngFor="let Claim of claims">
+                  <td>{{ Claim.claimType }}</td>
+                  <td>{{ Claim.dateC }}</td>
+                  <td>{{ Claim.descriptionC }}</td>
+                  <td>{{ Claim.productType }}</td>
+                  <td>{{ Claim.etat }}</td>
+                  <td>{{ Claim.customer }}</td>
+                  <td>{{ Claim.delivery }}</td>
+                  <td>{{ Claim.CommandLigness }}</td>
+                  <td>{{ Claim.publication }}</td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" (click)="onDeletef(Claim.idClaim)"  >Delete</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" (click)="traiterRec(64)">Traiter </button>
+                  </td>
+
+                </tr>
+                <button class="btn btn-danger py-2 px-4" type="button" (click)="onDelete()">Delete All</button>
+
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+         
+       </div>
+       </div>
+       </div>
+
+</main>
+
+
+</div>
+</div>
+
+
+
